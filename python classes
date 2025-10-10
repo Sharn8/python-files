@@ -1,0 +1,10 @@
+class Lecturer: #create a class
+  def __init__(self, name, department, age): #self is an argument
+    self.name = name #assigns parameter'name' to the object's 'name' attribute
+    self.department = department #assigns parameter 'department' to the object's 'department' attribute
+    self.age = age #assigns parameter 'age' to the object's 'age' attribute
+  def registration(self, unit, class_name):
+    print(f"{self.name} is taking the {class_name} {unit} class")
+#create an object of Lecturer, which calls _init_ to set initial values
+lecturer1 = Lecturer("Doe", "Computer Science", 30)
+lecturer1.registration("python", "BDS")
