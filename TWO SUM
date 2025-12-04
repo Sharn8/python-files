@@ -1,0 +1,77 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOQFI9tPBSTmWwV6zn0wphl",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Sharn8/python-files/blob/main/TWO%20SUM\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#TWO SUM"
+      ],
+      "metadata": {
+        "id": "sn0geisW9ZC0"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def twosum(nums,target):\n",
+        "  hashmap ={}\n",
+        "  for i, num in enumerate(nums):\n",
+        "    complement = target-num\n",
+        "\n",
+        "    if complement in hashmap:\n",
+        "         return [hashmap[complement],i]\n",
+        "\n",
+        "    hashmap[num]=i\n",
+        "  return[]\n",
+        "\n",
+        "print(twosum([2,7,11,15],9))\n",
+        "print(twosum([3,2,4],6))\n",
+        "print(twosum([3,3],6))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "w3fJRESV9SW2",
+        "outputId": "e9c16478-d33f-4309-e676-9be301262cd0"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[0, 1]\n",
+            "[1, 2]\n",
+            "[0, 1]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
