@@ -1,0 +1,63 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPCuVlflKV1bCCuBGfq1zK+",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Sharn8/python-files/blob/main/Valid%20Anagrams\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#VALID ANAGRAM"
+      ],
+      "metadata": {
+        "id": "IeokOnjTCFFz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Solution:\n",
+        "    def isAnagram(self, s: str, t: str) -> bool:\n",
+        "        if len(s) != len(t):\n",
+        "            return False\n",
+        "\n",
+        "        countS, countT = {}, {}\n",
+        "        for i in range(len(s)):\n",
+        "            countS[s[i]] = 1 + countS.get(s[i], 0)\n",
+        "            countT[t[i]] = 1 + countT.get(t[i], 0)\n",
+        "\n",
+        "        for c in countS:\n",
+        "            if countS[c] != countT.get(c, 0):\n",
+        "                return False\n",
+        "        return True\n"
+      ],
+      "metadata": {
+        "id": "pjPxQqItIP_U"
+      },
+      "execution_count": 7,
+      "outputs": []
+    }
+  ]
+}
