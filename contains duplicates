@@ -1,0 +1,58 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOR3NRN4MS83oW7d8n73Sh/",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Sharn8/python-files/blob/main/contains%20duplicates\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#CONTAINS DUPLICATES"
+      ],
+      "metadata": {
+        "id": "9Ga7WQ2ZOtfO"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "id": "QEBJhbd8Ors0"
+      },
+      "outputs": [],
+      "source": [
+        "class Solution:\n",
+        "    def containsDuplicate(self, nums: list[int]) -> bool:\n",
+        "        hashset = set()\n",
+        "\n",
+        "        for n in nums:\n",
+        "            if n in hashset:\n",
+        "                return True\n",
+        "            hashset.add(n)\n",
+        "        return False"
+      ]
+    }
+  ]
+}
